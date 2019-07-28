@@ -9,8 +9,9 @@ if (file_exists(CORGI['root'] . 'vendor/autoload.php')) {
     require CORGI['root'] . 'vendor/autoload.php';
 }
 
-require CORGI['application'] . 'config.php';
+require CORGI['application'] . 'Config.php';
 
 require CORGI['root'] . 'CorgiMVC.php';
 
 $CorgiMVC = new CorgiMVC;
+$CorgiMVC->loadFramework();

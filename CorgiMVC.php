@@ -3,7 +3,7 @@
 class CorgiMVC
 {
 
-    function __construct() {
+    public function loadFramework() {
         $this->autoLoader();
         $parameters = $this->getURLParameters();
         $GLOBALS['parameters'] = $parameters;
@@ -40,7 +40,7 @@ class CorgiMVC
         });
     }
 
-    private function getURLParameters()
+    public function getURLParameters()
     {
         // Break out the params and remove unneeded values
         $params = $_SERVER['REQUEST_URI'];
