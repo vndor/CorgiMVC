@@ -1,0 +1,16 @@
+{
+	"name": "aphp/foundation",
+	"description": "php foundation classes",
+	"keywords": [ 
+		"PHP", "foundation", "class"
+	],
+	"type": "php",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"aphp\\Foundation\\" : "src/"
+		}
+	}
+}

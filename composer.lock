@@ -1,0 +1,150 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "50f29f2a321ae403118d91c9ba69a87c",
+    "packages": [
+        {
+            "name": "aphp/foundation",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GonistLelatel/aphp_foundation.git",
+                "reference": "7aa3e0b732511b7b75cae66c88a458a3e71a6f85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GonistLelatel/aphp_foundation/zipball/7aa3e0b732511b7b75cae66c88a458a3e71a6f85",
+                "reference": "7aa3e0b732511b7b75cae66c88a458a3e71a6f85",
+                "shasum": ""
+            },
+            "type": "php",
+            "autoload": {
+                "psr-4": {
+                    "aphp\\Foundation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "php foundation classes",
+            "keywords": [
+                "class",
+                "foundation",
+                "php"
+            ],
+            "time": "2019-07-12T00:06:29+00:00"
+        },
+        {
+            "name": "aphp/xpdo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GonistLelatel/xpdo.git",
+                "reference": "be010494b6b47bb5b2bd0c552c428ba04eaa14f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GonistLelatel/xpdo/zipball/be010494b6b47bb5b2bd0c552c428ba04eaa14f2",
+                "reference": "be010494b6b47bb5b2bd0c552c428ba04eaa14f2",
+                "shasum": ""
+            },
+            "require": {
+                "aphp/foundation": "~1.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "aphp/logger": "~1.0"
+            },
+            "type": "php",
+            "autoload": {
+                "psr-4": {
+                    "aphp\\XPDO\\": "src/"
+                },
+                "files": [
+                    "src/Exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP PDO Wrapper for MySQL, for SQLite. ORM (Object Relational Mapping) supported for keys fields.",
+            "keywords": [
+                "Simple",
+                "database",
+                "flyweight",
+                "mysql",
+                "orm",
+                "orm-library",
+                "ormlite",
+                "pdo",
+                "php",
+                "sqlite"
+            ],
+            "time": "2019-07-12T00:12:36+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
+                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-21T13:42:00+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "aphp/xpdo": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0.0"
+    },
+    "platform-dev": []
+}
