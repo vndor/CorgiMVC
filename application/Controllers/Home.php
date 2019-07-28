@@ -2,19 +2,17 @@
 
 namespace Controllers;
 
-use Models\Cat;
-use Models\Dog;
+use Models\Example;
 
 class Home extends Controller
 {
     public function index($corgi)
     {
-        $cat = new Cat;
-        $dog = new Dog;
+        $example = new Example;
 
         $data = array(
-            "cat" => $cat->test(),
-            "dog" => $dog->test()
+            "exampleModel" => $example->text(),
+            "exampleURL" => isSet($corgi[0]) ? $corgi[0] : '',
         );
 
         return $this->getView($data);

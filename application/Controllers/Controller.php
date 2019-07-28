@@ -13,4 +13,8 @@ class Controller
         require_once CORGI['application'] . 'Layouts' . DIRECTORY_SEPARATOR . $layout . DIRECTORY_SEPARATOR . 'default.php';
     }
 
+    public function redirect($url) {
+        header('Location: ' . $url);
+    }
+
 }

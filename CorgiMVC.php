@@ -10,12 +10,12 @@ class CorgiMVC
 
         $controller_path = "Controllers\\{$parameters['controller']}";
 
-        if (class_exists($controller_path)) {
+        if (class_exists($controller_path) && method_exists($controller_path, $parameters['method'])) {
             $page = new $controller_path();
             $page->{$parameters['method']}($parameters['params']);   
         } else {
             header("HTTP/1.0 404 Not Found");
-            echo 'The URL you are trying to reach does not exist.';
+            header('Location: ' . CONFIG_ERRORS['404_Page']);
         }
 
     }
@@ -53,7 +53,7 @@ class CorgiMVC
         if (isSet($params_array[0]) && strlen($params_array[0])) {
             $controller_param = $params_array[0];
         } else {
-            $controller_param = 'Home';
+            $controller_param = CONFIG_HOME_VIEW['controller'];
         }
 
         // Get the method param, or default to index
@@ -61,7 +61,7 @@ class CorgiMVC
             $method_param = $params_array[1];
             
         } else {
-            $method_param = 'index';
+            $method_param = CONFIG_HOME_VIEW['method'];
         }
 
         unset($params_array[0]);
