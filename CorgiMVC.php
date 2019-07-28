@@ -8,7 +8,7 @@ class CorgiMVC
         $parameters = $this->getURLParameters();
         $GLOBALS['parameters'] = $parameters;
 
-        if ($parameters['folder'] != 'public') {
+        if (!in_array($parameters['folder'], CONFIG_PUBLIC)) {
             $controller_path = "Controllers\\{$parameters['controller']}";
 
             if (class_exists($controller_path) && method_exists($controller_path, $parameters['method'])) {
