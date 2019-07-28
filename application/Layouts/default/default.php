@@ -8,13 +8,11 @@
 
     <title>CorgiMVC</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
-
     <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo CORGI['http'] ?>public/assets/default/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+    <link href="<?php echo CORGI['http'] ?>public/assets/default/css/sticky-footer.css" rel="stylesheet">
   </head>
 
   <body>

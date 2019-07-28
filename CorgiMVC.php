@@ -8,14 +8,16 @@ class CorgiMVC
         $parameters = $this->getURLParameters();
         $GLOBALS['parameters'] = $parameters;
 
-        $controller_path = "Controllers\\{$parameters['controller']}";
+        if ($parameters['folder'] != 'public') {
+            $controller_path = "Controllers\\{$parameters['controller']}";
 
-        if (class_exists($controller_path) && method_exists($controller_path, $parameters['method'])) {
-            $page = new $controller_path();
-            $page->{$parameters['method']}($parameters['params']);   
-        } else {
-            header("HTTP/1.0 404 Not Found");
-            $this->redirect(CONFIG_ERRORS['404_Page']);
+            if (class_exists($controller_path) && method_exists($controller_path, $parameters['method'])) {
+                $page = new $controller_path();
+                $page->{$parameters['method']}($parameters['params']);   
+            } else {
+                header("HTTP/1.0 404 Not Found");
+                $this->redirect(CONFIG_ERRORS['404_Page']);
+            }
         }
 
     }
@@ -45,6 +47,7 @@ class CorgiMVC
         // Break out the params and remove unneeded values
         $params = $_SERVER['REQUEST_URI'];
         $params_array = explode("/", $params);
+        $folder = isSet($params_array[1]) ? $params_array[1] : "index";
         unset($params_array[0]);
         unset($params_array[1]);
         $params_array = array_values($params_array);
@@ -71,7 +74,8 @@ class CorgiMVC
         return array(
             "controller" => $controller_param,
             "method" => $method_param,
-            "params" => $params_array
+            "params" => $params_array,
+            "folder" => $folder
         );
     }
 
