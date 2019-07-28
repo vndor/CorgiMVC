@@ -6,6 +6,7 @@ class CorgiMVC
     function __construct() {
         $this->autoLoader();
         $parameters = $this->getURLParameters();
+        $GLOBALS['parameters'] = $parameters;
 
         $controller_path = "Controllers\\{$parameters['controller']}";
 
@@ -19,7 +20,7 @@ class CorgiMVC
 
     }
 
-    function autoLoader() {
+    private function autoLoader() {
         // autoload classes based on a 1:1 mapping from namespace to directory structure.
         spl_autoload_register(function ($className) {
 

@@ -5,7 +5,7 @@ namespace Models;
 class Dog {
 
     function test() {
-        return 'dog';
+        return 'Fred';
     }
 
 }
