@@ -2,12 +2,6 @@
 
 class CorgiMVC
 {
-    /** @var null The controller */
-    private $url_controller = null;
-    /** @var null The method (of the above controller), often also named "action" */
-    private $url_action = null;
-    /** @var array URL parameters */
-    private $url_params = array();
 
     function __construct() {
         $this->autoLoader();
@@ -53,7 +47,6 @@ class CorgiMVC
         unset($params_array[0]);
         unset($params_array[1]);
         $params_array = array_values($params_array);
-
 
         // Get the controller param, or default to home
         if (isSet($params_array[0]) && strlen($params_array[0])) {
