@@ -15,7 +15,7 @@ class CorgiMVC
             $page->{$parameters['method']}($parameters['params']);   
         } else {
             header("HTTP/1.0 404 Not Found");
-            header('Location: ' . CONFIG_ERRORS['404_Page']);
+            $this->redirect(CONFIG_ERRORS['404_Page']);
         }
 
     }
@@ -74,4 +74,16 @@ class CorgiMVC
             "params" => $params_array
         );
     }
+
+    public static function getView($with='', $layout='default') {
+        $corgi = $with;
+        $params = $GLOBALS['parameters'];
+        $viewBody = CORGI['application'] . 'Views' . DIRECTORY_SEPARATOR . $params['controller'] . DIRECTORY_SEPARATOR . $params['method'] . '.php';
+        require_once CORGI['application'] . 'Layouts' . DIRECTORY_SEPARATOR . $layout . DIRECTORY_SEPARATOR . 'default.php';
+    }
+
+    public static function redirect($url) {
+        header('Location: ' . $url);
+    }
+
 }

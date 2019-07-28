@@ -3,8 +3,9 @@
 namespace Controllers;
 
 use Models\Example;
+use CorgiMVC;
 
-class Home extends Controller
+class Home
 {
     public function index($corgi)
     {
@@ -15,7 +16,7 @@ class Home extends Controller
             "exampleURL" => isSet($corgi[0]) ? $corgi[0] : '',
         );
 
-        return $this->getView($data);
+        return CorgiMVC::getView($data);
     }
 
 }
