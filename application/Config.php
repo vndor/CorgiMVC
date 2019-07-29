@@ -31,8 +31,6 @@ define('CONFIG_ERRORS', array(
 define('CONFIG_PUBLIC', array(
     'public'
 ));
-<<<<<<< Updated upstream:application/Config.php
-=======
 
 /* 
     DATABASE CONNECTION
@@ -57,4 +55,3 @@ define('CONFIG_CONNECTION', array(
     "password" => "password"
 ));
 */
->>>>>>> Stashed changes:application/config.php
