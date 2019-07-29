@@ -23,6 +23,7 @@ define('CONFIG_ERRORS', array(
 
 /* 
     PUBLIC FOLDERS
+
     Folders that you want to be public and ignored by the framework 
     Do not add a leading "/" 
 */
@@ -30,3 +31,30 @@ define('CONFIG_ERRORS', array(
 define('CONFIG_PUBLIC', array(
     'public'
 ));
+<<<<<<< Updated upstream:application/Config.php
+=======
+
+/* 
+    DATABASE CONNECTION
+
+    ORM Connection to database
+*/
+
+/* SQLite */
+define('CONFIG_CONNECTION', array(
+    "type" => 'sqlite',
+    "path" => "database.sqlite",
+    "username" => "", // Optional
+    "password" => "" // Optional
+));
+
+/* MYSQL Example
+define('CONFIG_CONNECTION', array(
+    "type" => 'mysql',
+    "host" => "localhost",
+    "dbname" => "testdb",
+    "username" => "username",
+    "password" => "password"
+));
+*/
+>>>>>>> Stashed changes:application/config.php

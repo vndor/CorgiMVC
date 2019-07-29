@@ -1,8 +1,10 @@
 <?php
 
+use Ark\Database\Connection;
+
 class CorgiMVC
 {
-
+    
     public function loadFramework() {
         $this->autoLoader();
         $parameters = $this->getURLParameters();
@@ -88,6 +90,25 @@ class CorgiMVC
 
     public static function redirect($url) {
         header('Location: ' . $url);
+    }
+
+    public static function connection() {
+
+        if (CONFIG_CONNECTION['type'] == "mysql") {
+            $db = new Connection(
+                'mysql:host=' . CONFIG_CONNECTION['host'] . ';dbname=' . CONFIG_CONNECTION['dbname'],
+                CONFIG_CONNECTION['username'],
+                CONFIG_CONNECTION['password']
+            );
+        } else if (CONFIG_CONNECTION['type'] == "sqlite") {
+            $db = new Connection(
+                'sqlite:' . CONFIG_CONNECTION['path'],
+                CONFIG_CONNECTION['username'],
+                CONFIG_CONNECTION['password']
+            );
+        }
+        
+        return $db;
     }
 
 }

@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'aphp\\XPDO\\' => array($vendorDir . '/aphp/xpdo/src'),
-    'aphp\\Foundation\\' => array($vendorDir . '/aphp/foundation/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
+    'Ark\\Database\\' => array($vendorDir . '/ark/database/src'),
 );

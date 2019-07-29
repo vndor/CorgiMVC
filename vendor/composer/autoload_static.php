@@ -4,44 +4,35 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdbee60622c892a8a9037b21948acba80
+class ComposerStaticInit9bc2db05aa490e742cc1729022187080
 {
-    public static $files = array (
-        '50907194660c1c4dcaa66dde8773e3ac' => __DIR__ . '/..' . '/aphp/xpdo/src/Exceptions.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'a' => 
-        array (
-            'aphp\\XPDO\\' => 10,
-            'aphp\\Foundation\\' => 16,
-        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
         ),
+        'A' => 
+        array (
+            'Ark\\Database\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'aphp\\XPDO\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/aphp/xpdo/src',
-        ),
-        'aphp\\Foundation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/aphp/foundation/src',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Ark\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ark/database/src',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdbee60622c892a8a9037b21948acba80::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdbee60622c892a8a9037b21948acba80::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9bc2db05aa490e742cc1729022187080::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9bc2db05aa490e742cc1729022187080::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
