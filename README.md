@@ -9,7 +9,7 @@ CorgiMVC is great for applications that need a small footprint. We use it for th
 ## Features
 - MVC
 - OOP/Class/Namespaces Enabled
-- ORM Enabled (Thanks to https://github.com/arkphp/database)
+- ORM Enabled (Thanks to https://github.com/GonistLelatel/xpdo)
 - No RewriteEngine required for friendly URLs
 - Only need composer to install initially on a dev machine
 

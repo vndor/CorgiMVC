@@ -3,7 +3,7 @@
     "description": "A micro MVC framework for PHP that is ORM enabled and Composer optional",
     "require": {
         "php": ">=7.0.0",
-        "ark/database": "dev-master"
+        "aphp/xpdo": "dev-master"
     },
     "authors": [
         {

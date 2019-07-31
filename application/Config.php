@@ -41,9 +41,7 @@ define('CONFIG_PUBLIC', array(
 /* SQLite */
 define('CONFIG_CONNECTION', array(
     "type" => 'sqlite',
-    "path" => "database.sqlite",
-    "username" => "", // Optional
-    "password" => "" // Optional
+    "path" => "database.sqlite"
 ));
 
 /* MYSQL Example

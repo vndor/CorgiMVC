@@ -2,15 +2,15 @@
 
 namespace Models;
 
-use Ark\Database\Model;
+use aphp\XPDO\Model;
 
 class ExampleORM extends Model {
 
-    static public function config() {
-        return array(
-            'table' => 'ExampleORM',
-            'pk' => 'id',
-        );
+    public $id;
+    public $text;
+
+    function test() {
+        return $this->text;
     }
 
 }

@@ -1,12 +1,15 @@
 <?php
 
-use Ark\Database\Connection;
+use aphp\XPDO\Database;
 
 class CorgiMVC
 {
     
     public function loadFramework() {
+        
         $this->autoLoader();
+        $this->connection();
+
         $parameters = $this->getURLParameters();
         $GLOBALS['parameters'] = $parameters;
 
@@ -95,17 +98,16 @@ class CorgiMVC
     public static function connection() {
 
         if (CONFIG_CONNECTION['type'] == "mysql") {
-            $db = new Connection(
-                'mysql:host=' . CONFIG_CONNECTION['host'] . ';dbname=' . CONFIG_CONNECTION['dbname'],
+            $db = Database::getInstance();
+            $db->MySQLInit(
                 CONFIG_CONNECTION['username'],
-                CONFIG_CONNECTION['password']
+                CONFIG_CONNECTION['password'],
+                CONFIG_CONNECTION['dbname'],
+                CONFIG_CONNECTION['host']
             );
         } else if (CONFIG_CONNECTION['type'] == "sqlite") {
-            $db = new Connection(
-                'sqlite:' . CONFIG_CONNECTION['path'],
-                CONFIG_CONNECTION['username'],
-                CONFIG_CONNECTION['password']
-            );
+            $db = Database::getInstance();
+            $db->SQLiteInit(CONFIG_CONNECTION['path']);
         }
         
         return $db;
