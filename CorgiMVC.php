@@ -81,7 +81,7 @@ class CorgiMVC
 
         return array(
             "controller" => ucfirst($controller_param),
-            "method" => strtolower($method_param),
+            "method" => $method_param,
             "params" => $params_array,
             "folder" => $folder
         );
