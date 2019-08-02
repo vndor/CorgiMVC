@@ -53,3 +53,13 @@ define('CONFIG_CONNECTION', array(
     "password" => "password"
 ));
 */
+
+/* 
+    SESSIONS
+
+    Session managment
+*/
+
+define('CONFIG_SESSIONS', array(
+    "enable" => true
+));

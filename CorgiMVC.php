@@ -6,9 +6,12 @@ class CorgiMVC
 {
     
     public function loadFramework() {
-        
         $this->autoLoader();
         $this->connection();
+
+        if (CONFIG_SESSIONS['enable']) {
+            session_start();
+        }
 
         $parameters = $this->getURLParameters();
         $GLOBALS['parameters'] = $parameters;
