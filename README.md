@@ -31,6 +31,8 @@ Models are automatically loaded. Make sure you define the namespaces and class n
 
 With CorgiMVC, there is no configuration. As long as you name your folders, functions, and files correctly, it'll just work. The URL structure is: `/index.php/{controllerClass}/{controllerMethod}/{param1}/{param2}`
 
+Please note, the class name and file name needs to be Uppercase first letter only for the URL to work.
+
 - Public functions are accessible via the URL above
 - The `$corgi` argument is needed for URL params that you access via Array.
 - The `$corgi` argument is an Array of all of the paramaters AFTER the method in the URL like shown above. `$corgi[0]` would output `{param1}` for example.
