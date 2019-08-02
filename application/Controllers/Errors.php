@@ -6,7 +6,7 @@ use CorgiMVC;
 
 class Errors
 {
-    public function Error404($corgi)
+    public function error404($corgi)
     {
         return CorgiMVC::getView();
     }
