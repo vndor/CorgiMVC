@@ -6,7 +6,7 @@ use Models\User;
 use aphp\XPDO\Database;
 use CorgiMVC;
 
-class Login
+class Auth
 {
     public function index($corgi)
     {
@@ -23,7 +23,7 @@ class Login
         return CorgiMVC::getView($data);
     }
 
-    public function auth($corgi)
+    public function login($corgi)
     {   
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -34,7 +34,7 @@ class Login
             $_SESSION["user"] = $user;
             CorgiMVC::redirect('/index.php/home/dashboard');
         } else {
-            CorgiMVC::redirect('/index.php/login/index/failed');
+            CorgiMVC::redirect('/index.php/auth/index/failed');
         }
 
     }
@@ -42,6 +42,6 @@ class Login
     public function logout()
     {
         session_destroy();
-        CorgiMVC::redirect('/index.php/login');
+        CorgiMVC::redirect('/index.php/auth');
     }
 }

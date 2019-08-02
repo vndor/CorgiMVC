@@ -14,7 +14,7 @@ class Home
     public function dashboard($corgi)
     {
         if (!isSet($_SESSION["user"])) {
-            CorgiMVC::redirect('/index.php/login');
+            CorgiMVC::redirect('/index.php/auth');
         }
 
         $data = [
