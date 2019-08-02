@@ -80,8 +80,8 @@ class CorgiMVC
         $params_array = array_values($params_array);
 
         return array(
-            "controller" => $controller_param,
-            "method" => $method_param,
+            "controller" => ucfirst($controller_param),
+            "method" => strtolower($method_param),
             "params" => $params_array,
             "folder" => $folder
         );
