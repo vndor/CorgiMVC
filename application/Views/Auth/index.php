@@ -6,7 +6,7 @@
             <div class="card" style="margin-top:20px;">
                 <div class="card-header">Login</div>
                 <div class="card-body">
-                    <form action="/index.php/auth/login" method="post">
+                    <form action="<?php echo CORGI['http'] ?>index.php/auth/login" method="post">
                         <div class="form-group row">
                             <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
                             <div class="col-md-6">

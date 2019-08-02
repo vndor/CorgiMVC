@@ -32,9 +32,9 @@ class Auth
 
         if (password_verify($password, $user->password)) {
             $_SESSION["user"] = $user;
-            CorgiMVC::redirect('/index.php/home/dashboard');
+            CorgiMVC::redirect(CORGI['http'] . 'index.php/home/dashboard');
         } else {
-            CorgiMVC::redirect('/index.php/auth/index/failed');
+            CorgiMVC::redirect(CORGI['http'] . 'index.php/auth/index/failed');
         }
 
     }
@@ -42,6 +42,6 @@ class Auth
     public function logout()
     {
         session_destroy();
-        CorgiMVC::redirect('/index.php/auth');
+        CorgiMVC::redirect(CORGI['http'] . 'index.php/auth');
     }
 }
