@@ -44,7 +44,7 @@ Make sure you include `use CorgiMVC;` in all controllers to give the framework a
 
 ## Views
 
-Views are only attached to controller methods the return `CorgiMVC::getView()`. That controller will then render the view it belongs to. That view will live at `/Views/{controllerClass}/{controllerMethod}.php`
+Views are only attached to controller methods that return `CorgiMVC::getView()`. That controller will then render the view it belongs to. That view will live at `/Views/{controllerClass}/{controllerMethod}.php`
 
 ### Accessing the Controller Variables
 
