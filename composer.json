@@ -1,6 +1,7 @@
 {
     "name": "vndor/corgimvc",
     "description": "A micro MVC framework for PHP that is ORM enabled and Composer optional",
+    "type": "project",
     "require": {
         "php": ">=7.0.0",
         "aphp/xpdo": "dev-master"
