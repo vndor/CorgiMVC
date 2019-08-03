@@ -11,5 +11,6 @@
             "email": "howdy@vndor.co"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "license": "Apache-2.0",
 }
