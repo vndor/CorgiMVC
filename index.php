@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . DIRECTORY_SEPARATOR . 'application' . DIRECTORY_SEPARATOR . 'Config.php';
+
 if (isset($_SERVER['HTTPS'])) {
     $proto = "https";
 } else {
@@ -10,10 +12,8 @@ define('CORGI', array(
     "root" => __DIR__ . DIRECTORY_SEPARATOR,
     "application" => __DIR__ . DIRECTORY_SEPARATOR . 'application' . DIRECTORY_SEPARATOR,
     "layout" => __DIR__ . DIRECTORY_SEPARATOR . 'application' . DIRECTORY_SEPARATOR . 'Layouts' . DIRECTORY_SEPARATOR,
-    "http" => $proto .'://'. $_SERVER['HTTP_HOST'] . DIRECTORY_SEPARATOR
+    "http" => $proto .'://'. $_SERVER['HTTP_HOST'] . DIRECTORY_SEPARATOR . CONFIG_SUB_DIRECTORY
 ));
-
-require CORGI['application'] . 'Config.php';
 
 if (file_exists(CORGI['root'] . 'vendor/autoload.php')) {
     require CORGI['root'] . 'vendor/autoload.php';

@@ -12,6 +12,15 @@ define('CONFIG_HOME_VIEW', array(
 ));
 
 /* 
+    SUB DIRECTORY
+
+    Define a sub directory if there is one, otherwise leave blank
+    Make sure you end the directory with DIRECTORY_SEPARATOR
+ */
+
+define('CONFIG_SUB_DIRECTORY', '');
+
+/* 
     ERROR PAGES
 
     Path to error pages 
