@@ -7,7 +7,7 @@
  */
 
 define('CONFIG_HOME_VIEW', array(
-    "controller" => 'Home',
+    "controller" => 'HomeController',
     "method" => "index"
 ));
 
@@ -27,7 +27,7 @@ define('CONFIG_SUB_DIRECTORY', '');
 */
 
 define('CONFIG_ERRORS', array(
-    "404_Page" => '/index.php/errors/error404'
+    "404_Page" => '/index.php/error/error404'
 ));
 
 /* 

@@ -4,7 +4,7 @@ namespace Controllers;
 
 use CorgiMVC;
 
-class Home
+class HomeController
 {
     public function index($corgi)
     {

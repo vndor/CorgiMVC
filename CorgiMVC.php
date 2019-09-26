@@ -5,7 +5,8 @@ use aphp\XPDO\Database;
 class CorgiMVC
 {
     
-    public function loadFramework() {
+    public function loadFramework() 
+    {
         $this->autoLoader();
         $this->connection();
 
@@ -30,12 +31,13 @@ class CorgiMVC
 
     }
 
-    private function autoLoader() {
+    private function autoLoader() 
+    {
         // autoload classes based on a 1:1 mapping from namespace to directory structure.
         spl_autoload_register(function ($className) {
 
-            # Usually I would just concatenate directly to $file variable below
-            # this is just for easy viewing on Stack Overflow)
+            // Usually I would just concatenate directly to $file variable below
+            // this is just for easy viewing on Stack Overflow)
                 $ds = DIRECTORY_SEPARATOR;
                 $dir = CORGI['application'];
 
@@ -62,7 +64,7 @@ class CorgiMVC
 
         // Get the controller param, or default to home
         if (isSet($params_array[0]) && strlen($params_array[0])) {
-            $controller_param = $params_array[0];
+            $controller_param = $params_array[0] . "Controller";
         } else {
             $controller_param = CONFIG_HOME_VIEW['controller'];
         }
@@ -87,9 +89,11 @@ class CorgiMVC
         );
     }
 
-    public static function getView($with='', $layout='default') {
+    public static function getView($with='', $layout='default') 
+    {
         $corgi = $with;
         $params = $GLOBALS['parameters'];
+        $params['controller'] = str_replace("Controller", "", $params['controller']);
         $viewBody = CORGI['application'] . 'Views' . DIRECTORY_SEPARATOR . $params['controller'] . DIRECTORY_SEPARATOR . $params['method'] . '.php';
         require_once CORGI['application'] . 'Layouts' . DIRECTORY_SEPARATOR . $layout . DIRECTORY_SEPARATOR . 'default.php';
     }

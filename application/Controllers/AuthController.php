@@ -6,7 +6,7 @@ use Models\User;
 use aphp\XPDO\Database;
 use CorgiMVC;
 
-class Auth
+class AuthController
 {
     public function index($corgi)
     {

@@ -4,7 +4,7 @@ namespace Controllers;
 
 use CorgiMVC;
 
-class Errors
+class ErrorController
 {
     public function error404($corgi)
     {
