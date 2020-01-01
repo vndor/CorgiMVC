@@ -17,7 +17,7 @@ class Role extends Model {
 
     public function users()
     {
-        return User::loadWithField('roleid', $this->id);
+        return User::loadWithField('role_id', $this->id);
     }
 
 }

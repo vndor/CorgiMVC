@@ -17,7 +17,7 @@ class User extends Model {
 
     public function role()
     {
-        return Role::loadWithId($this->roleid);
+        return Role::loadWithId($this->role_id);
     }
 
 }

@@ -21,6 +21,7 @@ CorgiMVC is great for applications that need a small footprint. We use it for th
 1. Clone or copy CorgiMVC to a PHP 7.0+ server
 1. Run `composer install`
 1. Edit `application/Config.php` to your likings
+1. Create your database
 1. Setup the migrations table `php ruckus.php db:setup`
 1. Migrate the database `php ruckus.php db:migrate`
 
