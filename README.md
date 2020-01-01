@@ -10,6 +10,7 @@ CorgiMVC is great for applications that need a small footprint. We use it for th
 - MVC
 - OOP/Class/Namespaces Enabled
 - ORM Enabled (Thanks to https://github.com/GonistLelatel/xpdo)
+- Migration enabled (Thanks to https://github.com/ruckus/ruckusing-migrations)
 - No RewriteEngine required for friendly URLs
 - Only need composer to install initially on a dev machine
 
@@ -20,6 +21,8 @@ CorgiMVC is great for applications that need a small footprint. We use it for th
 1. Clone or copy CorgiMVC to a PHP 7.0+ server
 1. Run `composer install`
 1. Edit `application/Config.php` to your likings
+1. Setup the migrations table `php ruckus.php db:setup`
+1. Migrate the database `php ruckus.php db:migrate`
 
 ## Models
 

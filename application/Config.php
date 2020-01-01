@@ -59,7 +59,8 @@ define('CONFIG_CONNECTION', array(
     "host" => "localhost",
     "dbname" => "testdb",
     "username" => "username",
-    "password" => "password"
+    "password" => "password",
+    "port" => "3306"
 ));
 */
 

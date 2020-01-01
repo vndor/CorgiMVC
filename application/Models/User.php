@@ -12,7 +12,7 @@ class User extends Model {
 
     static function tableName() 
     {
-        return 'Users';
+        return 'users';
     }
 
     public function role()
