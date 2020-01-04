@@ -4,8 +4,8 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "aphp/xpdo": "dev-master",
-        "ruckusing/ruckusing-migrations": "dev-master"
+        "aphp/xpdo": "^1.0",
+        "ruckusing/ruckusing-migrations": "^1.1"
     },
     "authors": [
         {
@@ -13,6 +13,5 @@
             "email": "howdy@vndor.co"
         }
     ],
-    "minimum-stability": "dev",
     "license": "Apache-2.0"
 }
