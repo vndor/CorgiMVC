@@ -120,4 +120,75 @@ class CorgiMVC
         return $db;
     }
 
+    public static function createPage($page) {
+        $page = ucfirst($page);
+        $controller_content = "<?php
+
+namespace Controllers;
+
+use CorgiMVC;
+
+class {$page}Controller
+{
+    public function index(\$corgi)
+    {
+        return CorgiMVC::getView();
+    }
+}";
+        file_put_contents("./application/Controllers/{$page}Controller.php", $controller_content);
+        mkdir("./application/Views/{$page}");
+        file_put_contents("./application/Views/{$page}/index.php", "");
+    }
+
+    public static function createModel($name) {
+        $name = ucfirst($name);
+        $model_content = "<?php
+
+namespace Models;
+
+use aphp\XPDO\Model;
+
+class {$name} extends Model {
+
+    public \$id;
+
+    static function tableName() 
+    {
+        return '';
+    }
+
+}";
+        file_put_contents("./application/Models/{$name}.php", $model_content);
+    }
+
+    public static function cli($argv) {
+        $command = isSet($argv[1]) ? $argv[1] : "";
+
+        switch ($command) {
+            case "create:page":
+                $page = isSet($argv[2]) ? $argv[2] : "";
+
+                if (strlen($page)) {
+                    Self::createPage($page);
+                    echo "{$page} Controller and View created.";
+                } else {
+                    echo "create:page <page_name> : Creates a new controller and view for a page.";
+                }
+                break;
+            case "create:model":
+                $model = isSet($argv[2]) ? $argv[2] : "";
+
+                if (strlen($model)) {
+                    Self::createModel($model);
+                    echo "{$model} Model created.";
+                } else {
+                    echo "create:model <model_name> : Creates a new model.";
+                }
+                break;
+            default:
+                echo "Commands are:";
+                echo "\n - create:page <page_name> : Creates a new controller and view for a page.";
+                echo "\n - create:model <model_name> : Creates a new model.";
+        }
+    }
 }

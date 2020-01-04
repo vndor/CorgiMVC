@@ -25,6 +25,15 @@ CorgiMVC is great for applications that need a small footprint. We use it for th
 1. Setup the migrations table `php ruckus.php db:setup`
 1. Migrate the database `php ruckus.php db:migrate`
 
+## CLI
+
+CorgiMVC has an optional CLI to help with development. If you don't want it, remvoe the corgi.php file.
+
+php corgi create:page <page_name> : Creates a new controller and view for a page.
+php corgi create:model <model_name> : Creates a new model.
+
+For migrations: https://github.com/ruckus/ruckusing-migrations
+
 ## Models
 
 Models are automatically loaded. Make sure you define the namespaces and class names properly. If you want to use ORM refer to: https://github.com/GonistLelatel/xpdo
