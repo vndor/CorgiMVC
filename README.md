@@ -27,7 +27,7 @@ CorgiMVC is great for applications that need a small footprint. We use it for th
 
 ## CLI
 
-CorgiMVC has an optional CLI to help with development. If you don't want it, remvoe the corgi.php file.
+CorgiMVC has an optional CLI to help with development. If you don't want it, remove the corgi.php file.
 
 php corgi create:page <page_name> : Creates a new controller and view for a page.
 
