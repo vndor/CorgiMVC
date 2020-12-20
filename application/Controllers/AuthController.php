@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use Models\User;
-use aphp\XPDO\Database;
+use vndor\XPDO\Database;
 use CorgiMVC;
 
 class AuthController

@@ -2,7 +2,7 @@
 
 namespace Models;
 
-use aphp\XPDO\Model;
+use vndor\XPDO\Model;
 use Models\User;
 
 class Role extends Model {

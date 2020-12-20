@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "aphp/xpdo": "^1.0",
+        "vndor/xpdo": "dev-master",
         "ruckusing/ruckusing-migrations": "^1.1"
     },
     "authors": [

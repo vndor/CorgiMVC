@@ -37,7 +37,7 @@ For migrations: https://github.com/ruckus/ruckusing-migrations
 
 ## Models
 
-Models are automatically loaded. Make sure you define the namespaces and class names properly. If you want to use ORM refer to: https://github.com/GonistLelatel/xpdo
+Models are automatically loaded. Make sure you define the namespaces and class names properly. If you want to use ORM refer to: https://github.com/vndor/xpdo
 
 ## Controllers
 

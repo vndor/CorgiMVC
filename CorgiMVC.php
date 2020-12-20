@@ -1,6 +1,6 @@
 <?php
 
-use aphp\XPDO\Database;
+use vndor\XPDO\Database;
 
 class CorgiMVC
 {
@@ -146,7 +146,7 @@ class {$page}Controller
 
 namespace Models;
 
-use aphp\XPDO\Model;
+use vndor\XPDO\Model;
 
 class {$name} extends Model {
 
